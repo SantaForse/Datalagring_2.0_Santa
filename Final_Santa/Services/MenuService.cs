@@ -56,7 +56,7 @@ namespace Final_Santa.Services
                     Console.WriteLine($"FullName: {errand.FirstName} {errand.LastName}");
                     Console.WriteLine($"E-mail: {errand.Email}");
                     Console.WriteLine($"PhoneNumber: {errand.PhoneNumber}");
-                    Console.WriteLine($"Errand: {errand.Title}, {errand.ErrandDescription}, {errand.ErrandDate} {errand.ErrandStatus}");
+                    Console.WriteLine($"Errand title: {errand.Title},\nErrand description: {errand.ErrandDescription},\nErrand creation date:  {errand.ErrandDate},\nErrand status:  {errand.ErrandStatus}");
                     Console.WriteLine("");
                 }
             }
@@ -84,7 +84,7 @@ namespace Final_Santa.Services
                     Console.WriteLine($"FullName: {customer.FirstName} {customer.LastName}");
                     Console.WriteLine($"E-mail: {customer.Email}");
                     Console.WriteLine($"PhoneNumber: {customer.PhoneNumber}");
-                    Console.WriteLine($"Errand: {customer.Title}, {customer.ErrandDescription}, {customer.ErrandDate} {customer.ErrandStatus}");
+                    Console.WriteLine($"Errand title: {customer.Title},\nErrand description: {customer.ErrandDescription},\nErrand creation date:  {customer.ErrandDate},\nErrand status:  {customer.ErrandStatus}");
                     Console.WriteLine("");
                 }
                 else
@@ -129,9 +129,6 @@ namespace Final_Santa.Services
 
                     Console.Write("Errand Description: ");
                     errand.ErrandDescription = Console.ReadLine() ?? null!;
-
-                    //Console.Write("Errand Status: ");
-                    //errand.ErrandStatus = Console.ReadLine() ?? null!;
 
 
                     await ErrandService.UpdateAsync(errand);
@@ -214,7 +211,7 @@ namespace Final_Santa.Services
                 }
                 else
                 {
-                    Console.WriteLine($"Could not find the errand with a gicen title.");
+                    Console.WriteLine($"Could not find the errand with a given title.");
                     Console.WriteLine("");
                 }
 
