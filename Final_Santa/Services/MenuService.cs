@@ -56,7 +56,19 @@ namespace Final_Santa.Services
                     Console.WriteLine($"FullName: {errand.FirstName} {errand.LastName}");
                     Console.WriteLine($"E-mail: {errand.Email}");
                     Console.WriteLine($"PhoneNumber: {errand.PhoneNumber}");
-                    Console.WriteLine($"Errand title: {errand.Title},\nErrand description: {errand.ErrandDescription},\nErrand creation date:  {errand.ErrandDate},\nErrand status:  {errand.ErrandStatus}");
+                    Console.WriteLine($"Errand title: {errand.Title},\nErrand description: {errand.ErrandDescription},\nErrand creation date:  {errand.ErrandDate}");
+                    if (errand.ErrandStatus == 1)
+                    {
+                        Console.WriteLine($"Errand status: not started");
+                    }
+                    else if (errand.ErrandStatus == 2)
+                    {
+                        Console.WriteLine($"Errand status: ongoing");
+                    }
+                    else if (errand.ErrandStatus == 3)
+                    {
+                        Console.WriteLine($"Errand status: finished");
+                    }
                     Console.WriteLine("");
                 }
             }
@@ -80,11 +92,23 @@ namespace Final_Santa.Services
 
                 if (customer != null)
                 {
-                    Console.WriteLine($"CustomerNumber: {customer.Id}");
+                    Console.WriteLine($"\nCustomerNumber: {customer.Id}");
                     Console.WriteLine($"FullName: {customer.FirstName} {customer.LastName}");
                     Console.WriteLine($"E-mail: {customer.Email}");
                     Console.WriteLine($"PhoneNumber: {customer.PhoneNumber}");
-                    Console.WriteLine($"Errand title: {customer.Title},\nErrand description: {customer.ErrandDescription},\nErrand creation date:  {customer.ErrandDate},\nErrand status:  {customer.ErrandStatus}");
+                    Console.WriteLine($"Errand title: {customer.Title},\nErrand description: {customer.ErrandDescription},\nErrand creation date:  {customer.ErrandDate}");
+                    if (customer.ErrandStatus == 1)
+                    {
+                        Console.WriteLine($"Errand status: not started");
+                    }
+                    else if (customer.ErrandStatus == 2)
+                    {
+                        Console.WriteLine($"Errand status: ongoing");
+                    }
+                    else if (customer.ErrandStatus == 3)
+                    {
+                        Console.WriteLine($"Errand status: finished");
+                    }
                     Console.WriteLine("");
                 }
                 else

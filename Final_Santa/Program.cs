@@ -23,6 +23,7 @@ while (true)
                 case "1":
                     Console.Clear();
                     await menu.CreateNewErrandAsync();
+                    Console.WriteLine("\nYou have created a new errand!");
                     break;
 
                 case "2":
@@ -33,10 +34,11 @@ while (true)
                 case "3":
                     Console.Clear();
                     await menu.UpdateSpecificErrandAsync();
+                    Console.WriteLine("\nNow the errand you chose is updated!");
                     break;
 
                 default:
-                    Console.WriteLine("Not a valid choice");
+                    Console.WriteLine("\nNot a valid choice");
                     Console.ReadKey();
                     break;
             }
@@ -56,6 +58,7 @@ while (true)
                 case "1":
                     Console.Clear();
                     await menu.UpdateErrandStatusAsync();
+                    Console.WriteLine("\nNow the errand status is updated!");
                     break;
 
 
@@ -72,10 +75,11 @@ while (true)
                 case "4":
                     Console.Clear();
                     await menu.DeleteSpecificErrandAsync();
+                    Console.WriteLine("\nNow the errand you chose is deleted!");
                     break;
 
                 default:
-                    Console.WriteLine("Not a valid choice");
+                    Console.WriteLine("\nNot a valid choice");
                     Console.ReadKey();
                     break;
 
@@ -83,6 +87,6 @@ while (true)
             break;
     }
 
-    Console.WriteLine("\nTryck på valfri knapp för att fortsätta...");
+    Console.WriteLine("\nPress any button to continue..");
     Console.ReadKey();
 }
